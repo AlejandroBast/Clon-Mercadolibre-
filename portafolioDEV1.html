@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="es">
+<head>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+<title>Alejandro Bast | Backend Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#0B1120;
+--card:#111827;
+--accent:#6366F1;
+--accent2:#22C55E;
+--text:#E5E7EB;
+--muted:#9CA3AF;
+--border:#1F2937;
+--radius:14px;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Inter,system-ui;
+background:linear-gradient(135deg,#0B1120,#020617);
+color:var(--text);
+padding:40px;
+display:flex;
+justify-content:center;
+}
+
+.site{
+max-width:1100px;
+width:100%;
+}
+
+/* NAV */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.logo{
+width:50px;
+height:50px;
+border-radius:12px;
+background:linear-gradient(135deg,#6366F1,#22C55E);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-6px)}
+100%{transform:translateY(0)}
+}
+
+nav{
+display:flex;
+gap:12px;
+}
+
+.btn{
+background:var(--accent);
+padding:10px 16px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:all .2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 20px rgba(0,0,0,.3);
+}
+
+.btn.outline{
+background:transparent;
+border:1px solid var(--border);
+}
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 340px;
+gap:30px;
+margin-bottom:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.03);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:22px;
+backdrop-filter:blur(10px);
+transition:all .25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:var(--accent);
+}
+
+h1{
+font-size:22px;
+}
+
+h2{
+margin-bottom:10px;
+}
+
+.muted{
+color:var(--muted);
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:12px;
+}
+
+.chip{
+background:#1F2937;
+padding:8px 12px;
+border-radius:999px;
+font-size:13px;
+font-weight:600;
+transition:.2s;
+}
+
+.chip:hover{
+background:var(--accent);
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+margin-top:20px;
+}
+
+.project{
+background:var(--card);
+border-radius:12px;
+padding:16px;
+border:1px solid var(--border);
+transition:.25s;
+}
+
+.project:hover{
+transform:translateY(-6px);
+border-color:var(--accent);
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.project h3{
+margin-bottom:4px;
+}
+
+/* CONTACT */
+
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input,textarea{
+background:#020617;
+border:1px solid var(--border);
+border-radius:8px;
+padding:10px;
+color:white;
+}
+
+footer{
+text-align:center;
+margin-top:40px;
+color:var(--muted);
+font-size:13px;
+}
+
+/* ANIMATIONS */
+
+.fade{
+opacity:0;
+transform:translateY(20px);
+animation:fadeUp .8s forwards;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main class="site">
+
+<header>
+
+<div class="brand">
+
+<div class="logo">🐱</div>
+
+<div>
+<h1>Alejandro Bast</h1>
+<div class="muted">Backend / Full-Stack Engineer</div>
+</div>
+
+</div>
+
+<nav>
+
+<a class="btn outline" href="#projects">Proyectos</a>
+<a class="btn" href="https://github.com/AlejandroBast" target="_blank">GitHub</a>
+
+</nav>
+
+</header>
+
+<section class="hero fade">
+
+<div class="card">
+
+<h2>Construyo APIs y plataformas escalables</h2>
+
+<p class="muted">
+Ingeniero de software enfocado en backend.
+Diseño APIs seguras, arquitecturas limpias y sistemas preparados para alta concurrencia.
+</p>
+
+<div class="skills">
+
+<span class="chip">Node.js</span>
+<span class="chip">TypeScript</span>
+<span class="chip">NestJS</span>
+<span class="chip">PostgreSQL</span>
+<span class="chip">MongoDB</span>
+<span class="chip">Redis</span>
+<span class="chip">Docker</span>
+<span class="chip">Kubernetes</span>
+
+</div>
+
+<div style="margin-top:18px">
+
+<a class="btn" href="#projects">Ver proyectos</a>
+
+</div>
+
+</div>
+
+<aside class="card">
+
+<h3>Contacto</h3>
+
+<p class="muted">Disponible para proyectos o pasantías.</p>
+
+<br>
+
+<strong>Email</strong>
+<div class="muted">nicohlas.personal@gmail.com</div>
+
+<br>
+
+<a class="btn" href="https://github.com/AlejandroBast" target="_blank">
+Ver GitHub
+</a>
+
+</aside>
+
+</section>
+
+<section id="projects">
+
+<h2>Proyectos</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>E-commerce API</h3>
+
+<div class="muted">
+Node.js · PostgreSQL · Redis
+</div>
+
+<p class="muted">
+API de comercio electrónico con manejo de inventario,
+pagos y caché optimizado.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Auth & Payments</h3>
+
+<div class="muted">
+NestJS · JWT · OAuth2
+</div>
+
+<p class="muted">
+Sistema centralizado de autenticación y pagos.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Arquitectura Microservicios</h3>
+
+<div class="muted">
+Docker · Kubernetes · RabbitMQ
+</div>
+
+<p class="muted">
+Arquitectura orientada a eventos con observabilidad.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Realtime Notifications</h3>
+
+<div class="muted">
+Socket.io · Redis
+</div>
+
+<p class="muted">
+Sistema de notificaciones en tiempo real.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section style="margin-top:30px">
+
+<div class="card">
+
+<h3>Contacto</h3>
+
+<form>
+
+<input placeholder="Nombre"/>
+
+<input placeholder="Email"/>
+
+<textarea rows="4" placeholder="Mensaje"></textarea>
+
+<button class="btn">Enviar</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+Built with ❤️ by Alejandro Bast
+
+</footer>
+
+</main>
+
+</body>
+</html>

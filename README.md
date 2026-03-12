@@ -1,4 +1,7 @@
 # Clon Mercadolibre - Frontend
+<div align="center">
+  <img width="900" height="224" src="https://github.com/user-attachments/assets/b797fb53-a50c-4745-9df8-e43af81ebb3f">
+</div>
 
 > Proyecto de clon de MercadoLibre construido con Vite + React + TypeScript y TailwindCSS.
 
